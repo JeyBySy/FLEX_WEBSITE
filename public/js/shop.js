@@ -3,6 +3,7 @@ if (document.readyState == 'loading') {
 } else {
     ready()
 }
+
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -27,7 +28,7 @@ function ready() {
 
 var stripeHandler = StripeCheckout.configure({
     key: stripePublicKey,
-    locale: 'auto',
+    locale: 'en',
     token: function (token) {
         var items = []
         var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -42,6 +43,7 @@ var stripeHandler = StripeCheckout.configure({
                 quantity: quantity
             })
         }
+
         fetch('/purchase', {
             method: 'POST',
             headers: {
@@ -62,14 +64,14 @@ var stripeHandler = StripeCheckout.configure({
             }
             updateCartTotal()
         }).catch(function (error) {
-            console.log(error)
+            console.error(error)
         })
     }
 })
 
 function purchaseClicked() {
     var priceElement = document.getElementsByClassName('cart-total-price')[0]
-    var price = parseFloat(priceElement.innerHTML.replace('₱', '')) * 100
+    var price = parseFloat(priceElement.innerText.replace('$', '')) * 100
     stripeHandler.open({
         amount: price
     })
@@ -95,9 +97,8 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    var id = shopItem.dataset.itemId;
+    var id = shopItem.dataset.itemId
     addItemToCart(title, price, imageSrc, id)
-    console.log(title, price);
     updateCartTotal()
 }
 
@@ -120,8 +121,8 @@ function addItemToCart(title, price, imageSrc, id) {
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1" width="10">
-            <button class="btn btn-danger" type="button">&times;</button>
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
@@ -137,10 +138,10 @@ function updateCartTotal() {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var price = parseFloat(priceElement.innerText.replace('₱', ''))
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '₱' + total
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }

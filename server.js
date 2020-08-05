@@ -14,12 +14,12 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.static('public'))
 
-app.get('/store', function (req, res) {
+app.get('/shop', function (req, res) {
     fs.readFile('items.json', function (error, data) {
         if (error) {
             res.status(500).end()
         } else {
-            res.render('store.ejs', {
+            res.render('shop.ejs', {
                 stripePublicKey: stripePublicKey,
                 items: JSON.parse(data)
             })
@@ -33,7 +33,7 @@ app.post('/purchase', function (req, res) {
             res.status(500).end()
         } else {
             const itemsJson = JSON.parse(data)
-            const itemsArray = itemsJson.music.concat(itemsJson.merch)
+            const itemsArray = itemsJson.clothes
             let total = 0
             req.body.items.forEach(function (item) {
                 const itemJson = itemsArray.find(function (i) {
@@ -45,7 +45,7 @@ app.post('/purchase', function (req, res) {
             stripe.charges.create({
                 amount: total,
                 source: req.body.stripeTokenId,
-                currency: 'usd'
+                currency: 'php'
             }).then(function () {
                 console.log('Charge Successful')
                 res.json({ message: 'Successfully purchased items' })
@@ -58,3 +58,4 @@ app.post('/purchase', function (req, res) {
 })
 
 app.listen(3000)
+console.log('Success 3000')

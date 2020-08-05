@@ -1,7 +1,64 @@
 {
-    "items": [
+    "clothes": [
         {
-            "item": "TSHIRT"
+            "id": 1,
+            "name": "T-shirt 1",
+            "price": "250.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 2,
+            "name": "T-shirt 2",
+            "price": "150.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 3,
+            "name": "T-shirt 3",
+            "price": "350.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 4,
+            "name": "T-shirt 4",
+            "price": "150.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 5,
+            "name": "T-shirt 5",
+            "price": "270.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 6,
+            "name": "T-shirt 6",
+            "price": "170.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 7,
+            "name": "T-shirt 7",
+            "price": "240.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 8,
+            "name": "T-shirt 8",
+            "price": "220.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 9,
+            "name": "T-shirt 9",
+            "price": "260.00",
+            "imgName": "images/picture.jpg"
+        },
+        {
+            "id": 10,
+            "name": "T-shirt 10",
+            "price": "280.00",
+            "imgName": "images/picture.jpg"
         }
     ]
 }

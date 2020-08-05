@@ -130,7 +130,5 @@ const log = (() => {
     login.style.transform = 'scale(1)';
     login.style.transition = 'ease-in 0.4s';
 });
-function order() {
-    alert('order');
-}
+
 

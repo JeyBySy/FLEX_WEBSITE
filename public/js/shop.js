@@ -28,7 +28,7 @@ function ready() {
 
 var stripeHandler = StripeCheckout.configure({
     key: stripePublicKey,
-    locale: 'auto',
+    locale: 'en',
     token: function (token) {
         var items = []
         var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -43,7 +43,6 @@ var stripeHandler = StripeCheckout.configure({
                 quantity: quantity
             })
         }
-
         fetch('/purchase', {
             method: 'POST',
             headers: {
@@ -54,7 +53,7 @@ var stripeHandler = StripeCheckout.configure({
                 stripeTokenId: token.id,
                 items: items
             })
-        }).then(function (res) {
+        }).then(function (res, data) {
             return res.json()
         }).then(function (data) {
             alert(data.message)
@@ -64,7 +63,7 @@ var stripeHandler = StripeCheckout.configure({
             }
             updateCartTotal()
         }).catch(function (error) {
-            console.error(error)
+            console.log(error)
         })
     }
 })

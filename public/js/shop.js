@@ -28,7 +28,7 @@ function ready() {
 
 var stripeHandler = StripeCheckout.configure({
     key: stripePublicKey,
-    locale: 'en',
+    locale: 'auto',
     token: function (token) {
         var items = []
         var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -63,6 +63,7 @@ var stripeHandler = StripeCheckout.configure({
             }
             updateCartTotal()
         }).catch(function (error) {
+            console.log("Charge FAIL")
             console.log(error)
         })
     }

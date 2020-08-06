@@ -4,61 +4,61 @@
             "id": 1,
             "name": "T-shirt 1",
             "price": "25000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 2,
             "name": "T-shirt 2",
             "price": "15000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 3,
             "name": "T-shirt 3",
             "price": "35000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 4,
             "name": "T-shirt 4",
             "price": "15000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 5,
             "name": "T-shirt 5",
             "price": "27000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 6,
             "name": "T-shirt 6",
             "price": "17000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 7,
             "name": "T-shirt 7",
             "price": "24000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 8,
             "name": "T-shirt 8",
             "price": "22000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 9,
             "name": "T-shirt 9",
             "price": "26000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         },
         {
             "id": 10,
             "name": "T-shirt 10",
             "price": "28000",
-            "imgName": "images/picture.jpg"
+            "imgName": "picture.jpg"
         }
     ]
 }

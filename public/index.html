@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FLEX</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link rel="stylesheet" href="css/mobileRespo.css">
 </head>
 </head>
 
@@ -25,25 +25,15 @@
         <div id="logoID" class="logo">
             <a href="index.html">FLEX</a>
         </div>
-
-        <ul class=" nav-link" id="nav_linkID">
-            <li>
-                <a href="index.html">HOME</a>
-            </li>
-            <li>
-                <a href="/shop">SHOP</a>
-            </li>
-            <li>
-                <a onclick="openCart()">CART</a>
-            </li>
+        <ul class="nav-link" id="nav_linkID">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="/shop">SHOP</a></li>
+            <li><a onclick="openCart()">CART</a></li>
         </ul>
         <div id="searchID" class="searchClass">
             <a onclick="openNav()"><i class="material-icons">search</i></a>
         </div>
-
-        <input type="button" value="LOGIN" onclick="log()">
     </nav>
-
     <!--OVERLAYS-->
     <section>
         <div class="overlay" id="overlayID">
@@ -56,7 +46,6 @@
             <input id="searchBarID" type="text" value="SEARCH" onclick="func_search()">
         </div>
     </section>
-
     <section>
         <div class="cart-overlay" id="cart-overlayID">
             <div class="cartNav" id='cartNavID'>
@@ -75,20 +64,54 @@
         </div>
     </section>
     <!--END-->
-
-    <div id="loginID" class="loginClass"></div>
-
-    <section class="main_body" id="main_bodyID">
-
-    </section>
-
-
-    <div class="goTop" id='goTopID' onclick="goTopBTN()">TOP</div>
-
+    <div class="goTop" id='goTopID' onclick="goTopBTN()"></div>
+    <section class="main_body" id="main_bodyID"></section>
     <footer>FOOTER</footer>
+
+    <!--MOBILE VIEW-->
+    <div class="mobile">
+        <header class="nav-top-btn">
+            <div class="mob-logo">
+                <h1>flex</h1>
+            </div>
+            <div class="btn">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </header>
+        <div class="mob-main-body" id="mob-main-bodyID">
+            <section class='mob-main-body-card'>
+                <div class="card">
+                    <div class="card-content">
+                        <h1>WELCOME</h1>
+                        <img src="images/picture.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card newArrival" id="new-arrival">
+                    <div class="card-content">
+                        <h1>WELCOME</h1>
+                        <img src="images/picture.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </section>
+        </div>
+        <navbar class="nav-bottom">
+            <section class="nav-bottom-container">
+                <div class="nav-bottom-btn"><a href="index.html">FX</a></div>
+                <div class="nav-bottom-btn"><a href="/shop">shop</a></div>
+                <div class="nav-bottom-btn" id="mob_cart"><a>cart</a></div>
+            </section>
+        </navbar>
+    </div>
 
     <script src="js/app.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/mobile.js"></script>
 </body>
 
 </html>

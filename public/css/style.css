@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     box-sizing: border-box;
@@ -38,6 +36,7 @@ nav{
     text-rendering: optimizeLegibility;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 2px solid white;
 }
 nav .logo a{
     position: absolute;
@@ -86,35 +85,7 @@ nav input{
     background: rgb(148, 148, 148);
     color: black;
 }
-#login_nav{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.loginClass{
-    width: 40%;
-    height: 50%;
-    z-index: 1;
-    top:20%;
-    left: 30%;
-    right: auto;
-    background: gray;
-    position: fixed;
-    transform: scale(0);
-}
-.line {
-    width: 30px;
-    height: 3px;
-    background: rgb(0, 0, 0);
-    margin: 5px;
-    display: none;
-}
-.btn{
-    text-align: center;
-    vertical-align: middle;
-    padding: .67em .67em;
-    cursor: pointer;
-}
+
 .btn-primary {
     color: white;
     background-color: #015f7e;
@@ -127,10 +98,11 @@ nav input{
 }
 .main_body{
     width: 100%;
-    height: fit-content; 
+    height: 300vh; 
     margin-top: 80px;
     background: rgba(0, 0, 0, 0.808);
     text-rendering: optimizeLegibility;
+    display: grid;
 }
 .shop-item{
     margin: 30px; 
@@ -156,15 +128,17 @@ nav input{
     transition: all 0.4s;
 }
 .shop-item-details {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 5px;
+    background: white;
 }
 .shop-item-price {
     flex-grow: 1;
-    font-size: 1.5rem;
-    text-shadow: 3px 2px 2px rgba(175, 121, 121, 0.801);
-    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    text-shadow: 3px 2px 2px rgba(182, 182, 182, 0.801);
+    color: rgb(0, 0, 0);
 }
 .shop-items {
     display: flex;

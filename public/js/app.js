@@ -109,10 +109,7 @@ function closeNav() {
     enableAll();
 }
 function openCart() {
-    if (document.body.clientWidth <= 450) {
-
-    }
-    else if (document.body.clientWidth == document.body.clientWidth) {
+    if (document.body.clientWidth == document.body.clientWidth) {
         document.body.style.background = "black";
         cart.style.width = "450px";
         closeBTN2.style.display = "flex";
@@ -126,9 +123,3 @@ function closeCart() {
 
     enableAll();
 }
-const log = (() => {
-    login.style.transform = 'scale(1)';
-    login.style.transition = 'ease-in 0.4s';
-});
-
-

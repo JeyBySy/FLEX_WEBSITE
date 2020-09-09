@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FLEX</title>
+    <title>FLEX | HOME</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/cart.css">
@@ -14,7 +14,6 @@
 </head>
 
 <body id='body_id'>
-
     <div id="topContactID">
         <div id="login_nav">
             <a>LOGIN/REGISTER</a>
@@ -26,26 +25,29 @@
             <a href="index.html">FLEX</a>
         </div>
         <ul class="nav-link" id="nav_linkID">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="/shop">SHOP</a></li>
-            <li><a onclick="openCart()">CART</a></li>
+            <li>
+                <a href="index.html">HOME</a></li>
+            <li>
+                <a href="/shop">SHOP</a></li>
+            <li>
+                <a onclick="openCart()">CART</a></li>
         </ul>
         <div id="searchID" class="searchClass">
             <a onclick="openNav()"><i class="material-icons">search</i></a>
         </div>
     </nav>
+
     <!--OVERLAYS-->
+    <!-- SEARCH -->
     <section>
         <div class="overlay" id="overlayID">
             <div id="searchOverlay" class="search_overlay">Search</div>
             <a href="javascript:void(0)" class="closebtn" id='closebtnID' onclick="closeNav()">&times;</a>
-
-            <ul class="overlay_link">
-
-            </ul>
+            <ul class="overlay_link"></ul>
             <input id="searchBarID" type="text" value="SEARCH" onclick="func_search()">
         </div>
     </section>
+    <!-- CART -->
     <section>
         <div class="cart-overlay" id="cart-overlayID">
             <div class="cartNav" id='cartNavID'>
@@ -60,12 +62,25 @@
                 <span class="cart-total-price">$0</span>
             </div>
             <div class="order" id="orderID" onclick="order()">ORDER</div>
-
         </div>
     </section>
     <!--END-->
     <div class="goTop" id='goTopID' onclick="goTopBTN()"></div>
-    <section class="main_body" id="main_bodyID"></section>
+    <div class="main_body" id="main_bodyID">
+        <section class="content-1">
+            <div class="first">
+                <h1>WELCOME</h1>
+                <img src="images/picture.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="content-2">
+            <div class="first">
+                <img src="images/picture.jpg" alt="">
+                <h1>WELCOME</h1>
+            </div>
+        </section>
+    </div>
     <footer>FOOTER</footer>
 
     <!--MOBILE VIEW-->
@@ -84,7 +99,9 @@
             <section class='mob-main-body-card'>
                 <div class="card">
                     <div class="card-content">
-                        <h1>WELCOME</h1>
+                        <div class="title">
+                            <h1>WELCOME</h1>
+                        </div>
                         <img src="images/picture.jpg" alt="">
                     </div>
                 </div>
@@ -99,6 +116,7 @@
                 <div class="card">5</div>
                 <div class="card">6</div>
             </section>
+            <div class="footer-main">footer</div>
         </div>
         <navbar class="nav-bottom">
             <section class="nav-bottom-container">

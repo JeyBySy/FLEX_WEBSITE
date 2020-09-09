@@ -5,9 +5,7 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    background: white;
-}
+
 #topContactID{
     width: 100%;
     height:50px;
@@ -98,11 +96,33 @@ nav input{
 }
 .main_body{
     width: 100%;
-    height: 300vh; 
+    height: fit-content;
     margin-top: 80px;
-    background: rgba(0, 0, 0, 0.808);
+    background: rgba(255, 141, 141, 0.808);
     text-rendering: optimizeLegibility;
+}
+.content-1,
+.content-2,
+.content-3,
+.content-4,
+.content-5
+{
+    
+    width: 100%;
+    height:fit-content;
+    background-color: gray;    
+ 
+}
+.first{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.first img{
+    width: 100%;
+    height: 90vh;
+}
+.first h1{
+    margin: auto;
 }
 .shop-item{
     margin: 30px; 
@@ -131,7 +151,7 @@ nav input{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     background: white;
 }
 .shop-item-price {

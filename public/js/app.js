@@ -39,24 +39,18 @@ window.onload = function () {
 };
 
 const nav = document.getElementById('navbarID');
-
 const search = document.getElementById('searchBarID');
 const overlayID = document.getElementById("overlayID");
 const searchOverlay = document.getElementById('searchOverlay');
-
 //const shop_top = document.getElementById('containerID');
-
 const closeBTN = document.getElementById('closebtnID');
-
 const login = document.getElementById('loginID');
-
 const closeBTN2 = document.getElementById('closebtnID2');
 const cart = document.getElementById('cart-overlayID');
 const cartLogo = document.getElementById('cartNavID');
-
 const mainBody = document.getElementById('main_bodyID');
-
 const footer = document.getElementById('footerID');
+
 function disable() {
     nav.style.pointerEvents = 'none';
     nav.style.opacity = '0.9';
@@ -70,16 +64,17 @@ function disable() {
     //shop_top.style.opacity = '0.1';
     //shop_top.style.transition = 'all 0.3s'
 
-    footer.style.pointerEvents = 'none';
-    footer.style.opacity = '0.3';
-    footer.style.transition = 'all 0.3s'
+    //footer.style.pointerEvents = 'none';
+    // footer.style.opacity = '0.3';
+    // footer.style.transition = 'all 0.3s'
 }
 function enableAll() {
     nav.style.pointerEvents = 'all';
     nav.style.opacity = '1';
     mainBody.style.opacity = '1';
     mainBody.style.pointerEvents = 'all';
-    footer.style.opacity = '1';
+
+    //footer.style.opacity = '1';
 
     //shop_top.style.opacity = '1';
     //shop_top.style.pointerEvents = 'all';
@@ -92,6 +87,7 @@ function openNav() {
     }
     else if (document.body.clientWidth == document.body.clientWidth) {
         document.body.style.background = "black";
+        document.body.style.transition = "ease in 0.9s";
         overlayID.style.width = "400px";
         searchOverlay.style.transitionDelay = "0s"
         searchOverlay.style.top = "25px";
@@ -101,6 +97,7 @@ function openNav() {
 }
 function closeNav() {
     document.body.style.background = "white";
+    document.body.style.transition = "all 0.9s";
     closeBTN.style.display = "none";
     overlayID.style.width = "0";
     searchOverlay.style.transitionDelay = "0.3s"
@@ -111,6 +108,8 @@ function closeNav() {
 function openCart() {
     if (document.body.clientWidth == document.body.clientWidth) {
         document.body.style.background = "black";
+        document.body.style.transition = "ease in 0.9s";
+        //nav.style.pointerEvents = 'all';
         cart.style.width = "450px";
         closeBTN2.style.display = "flex";
         disable();
@@ -118,6 +117,8 @@ function openCart() {
 }
 function closeCart() {
     document.body.style.background = "white";
+    document.body.style.transition = "all 0.9s";
+
     closeBTN2.style.display = "none";
     cart.style.width = "0";
 
